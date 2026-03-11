@@ -1,0 +1,61 @@
+# ==============================
+# Secrets and sensitive files
+# ==============================
+K8s/secrets/git-credentials.yaml
+.env
+
+# ==============================
+# Python / Airflow / DAGs
+# ==============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+airflow.cfg
+logs/
+tmp/
+*.log
+
+# ==============================
+# Kubernetes / kind / Helm
+# ==============================
+kind-cluster.yaml        # kind cluster config
+CACHED/
+unpacking/
+resolve/
+\[auth\]/
+\[internal\]/
+
+# Helm cache / charts
+# charts/
+# chart/
+# *.tgz
+# requirements.lock
+
+# ==============================
+# Git-sync secrets
+# ==============================
+*.key
+*.pem
+
+# ==============================
+# CI/CD / local tooling
+# ==============================
+.idea/
+.vscode/
+*.swp
+*.bak
+*.tmp
+node_modules/
+dist/
+
+# ==============================
+# Large or temporary data
+# ==============================
+Data/
+exporting/
+transferring/
+naming/
+sssss/cd da
