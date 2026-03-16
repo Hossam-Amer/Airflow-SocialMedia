@@ -58,4 +58,5 @@ kubectl get pods -n $NAMESPACE
 # Port-forward API server
 # ----------------------------------------
 echo "🔹 Starting port-forward to API server"
-kubectl port-forward svc/$RELEASE_NAME-api-server 8080:8080 --namespace $NAMESPACE
+# kubectl port-forward svc/$RELEASE_NAME-api-server 8080:8080 --namespace $NAMESPACE
+kubectl port-forward svc/airflow-api-server 8080:8080 --namespace airflow

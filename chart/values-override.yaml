@@ -15,11 +15,11 @@ dags:
     # git repo clone url
     # ssh example: git@github.com:apache/airflow.git
     # https example: https://github.com/apache/airflow.git
-    repo: https://github.com/Hossam-Amer/DataBricks-Airflow-SocialMedial.git
-    branch: Main
-    rev: HEAD
+    repo: https://github.com/Hossam-Amer/Airflow-SocialMedia.git
+    branch: main
+    # rev: HEAD
     # The git revision (branch, tag, or hash) to check out, v4 only
-    ref: v2-2-stable
+    # ref: v2-2-stable
     depth: 1
     # the number of consecutive failures allowed before aborting
     maxFailures: 0

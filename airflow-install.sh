@@ -24,10 +24,12 @@ kubectl apply -f k8s/secrets/git-secrets.yaml
 
 # Install Airflow using Helm
 helm install $RELEASE_NAME apache-airflow/airflow \
-    --namespace $NAMESPACE -f chart/values-override.yaml \
-    --set-string images.airflow.tag="$IMAGE_TAG" \
-    --debug \
-    --timeout 15m
+  --namespace $NAMESPACE \
+  -f chart/values-override.yaml \
+  --set-string images.airflow.repository=$IMAGE_NAME \
+  --set-string images.airflow.tag=$IMAGE_TAG \
+  --debug \
+  --timeout 17m
 
 # Port forward the API server
 kubectl port-forward svc/$RELEASE_NAME-api-server 8080:8080 --namespace $NAMESPACE
