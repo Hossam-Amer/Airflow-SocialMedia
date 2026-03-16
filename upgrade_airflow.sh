@@ -27,7 +27,8 @@ helm upgrade --install $RELEASE_NAME apache-airflow/airflow \
   --debug \
   --timeout 17m
 kubectl apply -f K8s/secrets/git-credentials.yaml
-
+kubectl apply -f k8s/volumes/airflow-logs-pv.yaml
+kubectl apply -f k8s/volumes/airflow-logs-pvc.yaml
 # ----------------------------------------
 # Force StatefulSets to use new image
 # ----------------------------------------

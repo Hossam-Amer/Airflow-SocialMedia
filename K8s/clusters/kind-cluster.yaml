@@ -1,0 +1,12 @@
+apiVersion: kind.x-k8s.io/v1alpha4
+kind: Cluster
+nodes:
+  - role: control-plane
+    extraMounts:
+      - hostPath: /mnt/e/mlops/airflow/tmp
+        containerPath: /mnt/airflow-data/logs
+
+  # - role: worker
+  #   extraMounts:
+  #     - hostPath: /mnt/e/mlops/airflow/tmp
+  #       containerPath: /mnt/airflow-data/logs

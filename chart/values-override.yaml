@@ -1,3 +1,4 @@
+executors: "KubernetesExecutor"
 images:
   airflow:
     repository: my-dags
