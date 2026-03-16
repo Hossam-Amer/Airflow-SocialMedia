@@ -27,6 +27,10 @@ dags:
     # should be "" if dags are at repo root
     subPath: "dags"
     credentialsSecret: git-credentials
+  persistence:
+    enabled: true
+    storageClassName: manual
+    size: 1Gi
 
 logs:
   persistence:
