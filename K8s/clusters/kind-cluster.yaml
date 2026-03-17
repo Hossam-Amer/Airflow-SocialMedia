@@ -3,10 +3,5 @@ kind: Cluster
 nodes:
   - role: control-plane
     extraMounts:
-      - hostPath: /mnt/e/mlops/airflow/tmp
+      - hostPath: /mnt/e/mlops/airflow/tmp/logs
         containerPath: /mnt/airflow-data/logs
-
-  # - role: worker
-  #   extraMounts:
-  #     - hostPath: /mnt/e/mlops/airflow/tmp
-  #       containerPath: /mnt/airflow-data/logs

@@ -5,8 +5,9 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 3Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteMany
   hostPath:
+    # Path on the container host, where logs will be stored
     path: /mnt/airflow-data/logs

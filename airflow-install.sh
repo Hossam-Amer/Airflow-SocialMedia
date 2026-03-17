@@ -18,6 +18,8 @@ kind load docker-image $IMAGE_NAME:$IMAGE_TAG
 
 # Create a namespace
 kubectl create namespace $NAMESPACE
+#git sync
+kubectl apply -f K8s/secrets/git-credentials.yaml
 
 # Apply kubernetes secrets
 kubectl apply -f k8s/volumes/airflow-logs-pv.yaml
