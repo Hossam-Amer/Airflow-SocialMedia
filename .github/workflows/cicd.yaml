@@ -2,7 +2,7 @@ name: Push Airflow Image to ECR
 on:
   push:
     branches:
-      - feature/demo
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
